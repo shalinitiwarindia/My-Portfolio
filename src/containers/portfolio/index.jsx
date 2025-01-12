@@ -23,7 +23,7 @@ const Portfolio = () => {
       description:
         "A fully responsive e-commerce website with cart functionality and sorting/filtering features.",
       date: "2023",
-      link: "https://github.com/username/shopping-website",
+      link: "https://github.com/shalinitiwarindia/Shopping-Website",
     },
     {
       title: "YouTube Clone",
