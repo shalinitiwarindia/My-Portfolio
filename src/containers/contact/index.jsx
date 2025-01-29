@@ -110,12 +110,4 @@ const Contact = () => {
               <button type="submit" disabled={isSubmitted}>
                 {isSubmitted ? "Submitted" : "Submit"}
               </button>
-            </form>
-          </div>
-        </Animate>
-      </div>
-    </section>
-  );
-};
-
-export default Contact;
+      
