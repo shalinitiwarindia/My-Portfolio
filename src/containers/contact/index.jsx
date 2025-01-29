@@ -98,16 +98,5 @@ const Contact = () => {
                 <textarea
                   required
                   name="description"
-                  className="inputDescription"
-                  rows="5"
-                  value={formData.description}
-                  onChange={handleChange}
-                />
-                <label htmlFor="description" className="descriptionLabel">
-                  Description
-                </label>
-              </div>
-              <button type="submit" disabled={isSubmitted}>
-                {isSubmitted ? "Submitted" : "Submit"}
-              </button>
+              
       
