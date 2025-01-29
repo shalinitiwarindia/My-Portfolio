@@ -17,7 +17,12 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
- 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("http://localhost:5000/send-email", {
+        method: "POST",
+        headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
@@ -93,5 +98,24 @@ const Contact = () => {
                 <textarea
                   required
                   name="description"
-              
-      
+                  className="inputDescription"
+                  rows="5"
+                  value={formData.description}
+                  onChange={handleChange}
+                />
+                <label htmlFor="description" className="descriptionLabel">
+                  Description
+                </label>
+              </div>
+              <button type="submit" disabled={isSubmitted}>
+                {isSubmitted ? "Submitted" : "Submit"}
+              </button>
+            </form>
+          </div>
+        </Animate>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
